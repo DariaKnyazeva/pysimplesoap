@@ -647,7 +647,7 @@ ageResult></AddPackageResponse></soap:Body></soap:Envelope>
             workflowToken = vcoWS.executeWorkflow(workflowId='my_uuid', username="my_user", password="my_password", workflowInputs=workflowInputs)
         except httplib2.ServerNotFoundError:
             #import pdb;pdb.set_trace()
-            print vcoWS.xml_response
+            print(vcoWS.xml_response)
             pass
 
     def test_issue157(self):
