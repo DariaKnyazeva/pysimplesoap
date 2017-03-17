@@ -127,8 +127,8 @@ def call_wsaa(cms, wsdl=WSDL, proxy=None, cache=None, wrapper="", trace=False):
 if __name__=="__main__":
     
     tra = create_tra(service="test", ttl=DEFAULT_TTL, cert=CERT)
-    print tra
+    print(tra)
     cms = sign_tra(tra, CERT, PRIVATEKEY)
     ta = call_wsaa(cms, WSDL['test'], trace=True)
-    print ta
+    print(ta)
 
