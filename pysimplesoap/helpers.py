@@ -40,6 +40,11 @@ log = logging.getLogger(__name__)
 
 def fetch(url, http, cache=False, force_download=False, wsdl_basedir='', headers={}):
     """Download a document from a URL, save it locally if cache enabled"""
+    
+    try:
+        url = url.decode('utf-8')
+    except AttributeError:
+        pass
 
     # check / append a valid schema if not given:
     url_scheme, netloc, path, query, fragment = urlsplit(url)
