@@ -84,7 +84,7 @@ def fetch(url, http, cache=False, force_download=False, wsdl_basedir='', headers
             if not os.path.isdir(cache):
                 os.makedirs(cache)
             f = open(filename, 'w')
-            f.write(xml)
+            f.write(xml.decode('utf-8'))
             f.close()
     return xml
 
